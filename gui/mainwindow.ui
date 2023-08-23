@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>610</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>610</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>610</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>610</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MVSEP-MDX23 Music Separation Tool v2.2.1-gui</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_StdOut">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>500</y>
+      <width>591</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string comment="Standard output. Shows progress of current separation"/>
+    </property>
+    <property name="title">
+     <string>Standard output</string>
+    </property>
+    <widget class="QTextEdit" name="textEdit_StdOut">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>6</x>
+       <y>24</y>
+       <width>580</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+font: 9pt &quot;Consolas&quot;;
+color: rgb(0, 200, 0);</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget_Selection">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>591</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="file_selection">
+     <attribute name="title">
+      <string>File selection</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_inputFiles">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>571</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string comment="File(s) to process"/>
+      </property>
+      <property name="title">
+       <string>Input audio files</string>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_inputFiles">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>24</y>
+         <width>471</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_inputFiles">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>24</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="batch_processing">
+     <attribute name="title">
+      <string>Batch Processing</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_inputDirectory">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>571</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string comment="Directory with audio files to process"/>
+      </property>
+      <property name="title">
+       <string>Input directory</string>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_inputDirectory">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>24</y>
+         <width>471</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_inputDirectory">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>24</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_StartSeparation">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>280</y>
+      <width>141</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="statusTip">
+     <string comment="Start processing selected audio files/directory"/>
+    </property>
+    <property name="text">
+     <string comment="eh" extracomment="eh">Start separation</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_Settings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>441</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <widget class="QCheckBox" name="checkBox_UseCPU">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>311</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="Use CPU instead of GPU for processing (can be very slow)"/>
+     </property>
+     <property name="text">
+      <string>Use CPU for infering instead of GPU (can be sluggish)</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_UseLargeGPU">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>122</y>
+       <width>311</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="Store all models in VRAM for faster processing of multiple audio files"/>
+     </property>
+     <property name="text">
+      <string>Use large GPU (at least 11 GB of VRAM is required)</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_GenerateVocInstOnly">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>144</y>
+       <width>311</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="Only separate vocals and instrumental. Skip bass, drums, other. Processing will be faster."/>
+     </property>
+     <property name="text">
+      <string>Generate only vocal/instrumental tracks (faster)</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_ChunkSize">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>24</y>
+       <width>401</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="Chunk size for ONNX models"/>
+     </property>
+     <property name="title">
+      <string>Chunk size (default: 500000)</string>
+     </property>
+     <widget class="QLabel" name="label_advice">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>24</y>
+        <width>381</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Use lower chunk_size value if you have Out of Memory errors!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider_ChunkSize">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>44</y>
+        <width>311</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="minimum">
+       <number>2</number>
+      </property>
+      <property name="maximum">
+       <number>20</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>10</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBelow</enum>
+      </property>
+      <property name="tickInterval">
+       <number>1</number>
+      </property>
+      <property name="inputConversionRatio" stdset="0">
+       <double>50000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_ChunkSize">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>44</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_AdvSettings">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>401</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="For those, who in dire need of more sliders to slide"/>
+     </property>
+     <property name="text">
+      <string>Advanced settings (spicy!)</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_SingleONNX">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>164</y>
+       <width>411</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="Only separate vocals and instrumental. Skip bass, drums, other. Processing will be faster."/>
+     </property>
+     <property name="text">
+      <string>Only use single ONNX model for vocals. (useful if you haven't enough VRAM)</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_Authors">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>0</y>
+      <width>241</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p dir='rtl' style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/ZFTurbo/MVSEP-MDX23-music-separation-model&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;v1.0&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;©&lt;/span&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://github.com/ZFTurbo/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;Roman Solovyev (ZFTurbo)&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &amp;amp; contributors&lt;br /&gt;&lt;/span&gt;&lt;a href=&quot;https://github.com/deton24/MVSEP-MDX23-Colab_v2.1&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;v2.1&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;©&lt;/span&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://github.com/deton24/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;deton24&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;a href=&quot;https://github.com/jarredou/MVSEP-MDX23-Colab_v2&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;v2.2.1&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;©&lt;/span&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://github.com/jarredou/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;jarredou&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;a href=&quot;https://github.com/alphatoasterous/MVSEP-MDX23-Colab_v2&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;v2.2.1-gui&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;©&lt;/span&gt;&lt;span style=&quot; color:#ffff7f;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://youtu.be/fYdgsFlTOH8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;a&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/alphatoasterous&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ffff7f;&quot;&gt;lphatoaster&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:600;&quot;&gt;MVSEP-MDX23&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_OutputSettings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>591</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Output settings</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_OutputDirectory">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>571</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string comment="Output directory"/>
+     </property>
+     <property name="title">
+      <string>Directory to save processed files</string>
+     </property>
+     <widget class="QLineEdit" name="lineEdit_OutputDirectory">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>24</y>
+        <width>471</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_OutputDirectory">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>24</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>groupBox_OutputSettings</zorder>
+   <zorder>groupBox_StdOut</zorder>
+   <zorder>tabWidget_Selection</zorder>
+   <zorder>pushButton_StartSeparation</zorder>
+   <zorder>groupBox_Settings</zorder>
+   <zorder>label_Authors</zorder>
+   <zorder>label_Title</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
