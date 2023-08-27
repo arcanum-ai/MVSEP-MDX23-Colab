@@ -9,7 +9,7 @@ if exist .venv\ (
     :: Setup virtualenv
     python -m virtualenv .venv
     .venv\Scripts\pip.exe install -r requirements.txt --index-url https://download.pytorch.org/whl/cu118
-    python gui.py
+    .venv\Scripts\python.exe gui.py
     exit 0
 )
 :noPython
