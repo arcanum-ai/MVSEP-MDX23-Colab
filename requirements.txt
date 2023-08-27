@@ -8,3 +8,5 @@ onnxruntime-gpu
 torch>=1.13.0
 pyyaml
 ml_collections
+
+PySide6-Essentials
