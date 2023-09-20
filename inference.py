@@ -443,7 +443,8 @@ class EnsembleDemucsMDXMusicSeparationModel:
         model = self.model_vocals_only
         shifts = 0
         overlap = overlap_demucs
-        vocals_demucs = apply_model(model, audio, shifts=shifts, overlap=overlap)[0][3].cpu().numpy()
+        vocals_demucs = 0.5 * apply_model(model, audio, shifts=shifts, overlap=overlap)[0][3].cpu().numpy() \
+                  + 0.5 * -apply_model(model, -audio, shifts=shifts, overlap=overlap)[0][3].cpu().numpy()
         
         model_vocals = model.cpu()
         del model_vocals
