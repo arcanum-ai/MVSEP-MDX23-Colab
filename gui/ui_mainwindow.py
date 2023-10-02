@@ -175,7 +175,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MVSEP-MDX23 Music Separation Tool v2.2.1-gui", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MVSEP-MDX23 Music Separation Tool v2.2.2-gui", None))
 #if QT_CONFIG(statustip)
         self.groupBox_StdOut.setStatusTip("")
 #endif // QT_CONFIG(statustip)
