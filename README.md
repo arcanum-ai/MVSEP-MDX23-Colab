@@ -1,16 +1,19 @@
-# MVSEP-MDX23-Colab fork v2.2.1-gui
+# MVSep-MDX23 Colab Fork v2.2.2
 Adaptation of MVSep-MDX23 algorithm for Colab, with few tweaks:
 
 [RUN IN GOOGLE COLAB](https://colab.research.google.com/github/alphatoasterous/MVSEP-MDX23-Colab_v2/blob/v2.2/MVSep-MDX23-Colab.ipynb)
 
 [RUN IN GOOGLE COLAB(RUSSIAN)](https://colab.research.google.com/github/alphatoasterous/MVSEP-MDX23-Colab_v2/blob/v2.2/MVSep-MDX23-Colab-Russian.ipynb)
 
+[**v2.2.2**](https://github.com/jareddou/MVSEP-MDX23-Colab_v2)
+* D1581 demo model replaced by new InstVocHQ MDXv3 model.
+
 [**v2.2.1-gui**](https://github.com/alphatoasterous/MVSEP-MDX23-Colab_v2)
 * Added semi-working gui.py for those brave souls, who wish infering audio without Jupyter notebooks
 * Added file upload feature in Colab
 * Added russian translation for Colab
 
-[**v2.2.1**](https://github.com/jareddou/MVSEP-MDX23-Colab_v2)
+**v2.2.1**
 * Added custom weights feature
 * Fixed some bugs
 * Fixed input: you can use a file or a folder as input now
