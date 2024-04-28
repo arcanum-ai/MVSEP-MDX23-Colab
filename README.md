@@ -1,4 +1,12 @@
-# MVSep-MDX23 Colab Fork v2.4
+
+
+## MVSep-MDX23 Colab Fork v2.4 на русском языке
+
+Адаптация алгоритма MVSep-MDX23 для Google Colab:
+https://colab.research.google.com/github/alphatoasterous/MVSEP-MDX23-Colab_v2/blob/v2.4/MVSep-MDX23-Colab-Russian.ipynb
+
+## Original README
+
 Adaptation of MVSep-MDX23 algorithm for Colab, with few tweaks:
 
 https://colab.research.google.com/github/jarredou/MVSEP-MDX23-Colab_v2/blob/v2.4/MVSep-MDX23-Colab.ipynb
