@@ -1,20 +1,20 @@
 
 
-## MVSep-MDX23 Colab Fork v2.4 на русском языке
+## MVSep-MDX23 Colab Fork v2.5 на русском языке
 
 Адаптация алгоритма MVSep-MDX23 для Google Colab:
-https://colab.research.google.com/github/alphatoasterous/MVSEP-MDX23-Colab_v2/blob/v2.4/MVSep-MDX23-Colab-Russian.ipynb
+https://colab.research.google.com/github/arcanum-ai/MVSEP-MDX23-Colab_v2/blob/v2.5-beta/MVSep-MDX23-Colab-Russian.ipynb
+https://colab.research.google.com/github/arcanum-ai/MVSEP-MDX23-Colab_v2/blob/v2.5-beta/MVSep-MDX23-Colab.ipynb
 
 ## Original README
 
 Adaptation of MVSep-MDX23 algorithm for Colab, with few tweaks:
-
 https://colab.research.google.com/github/jarredou/MVSEP-MDX23-Colab_v2/blob/v2.4/MVSep-MDX23-Colab.ipynb
 
 Recent changes:
 <font size=2>
 
-**v2.4**
+[**v2.4**](https://github.com/jarredou/MVSEP-MDX23-Colab_v2/tree/v2.4)
 * BS-Roformer models from viperx added
 * MDX-InstHQ4 model added as optionnal
 * Flac output
@@ -22,8 +22,6 @@ Recent changes:
 * Filter vocals below 50Hz option
 * Better chunking algo (no clicks)
 * Some code cleaning
-
-
 
 </font>
 <br>
@@ -80,4 +78,4 @@ Recent changes:
 ---
 
 Original work by ZFTurbo/MVSep : https://github.com/ZFTurbo/MVSEP-MDX23-music-separation-model
-
+Russian Colab by alphatoasterous : https://github.com/alphatoasterous/MVSEP-MDX23-Colab_v2

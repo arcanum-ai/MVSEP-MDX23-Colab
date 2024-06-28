@@ -457,6 +457,8 @@ class EnsembleDemucsMDXMusicSeparationModel:
         print("Loading BS-Roformer into memory")
         if options["BSRoformer_model"] == "ep_368_1296":
             model_name = "model_bs_roformer_ep_368_sdr_12.9628"
+        if options["BSRoformer_model"] == "ep_937_1053":
+            model_name = "model_bs_roformer_ep_937_sdr_10.5309"
         else:
             model_name = "model_bs_roformer_ep_317_sdr_12.9755"
         remote_url_bsrofo = f'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/{model_name}.ckpt'
